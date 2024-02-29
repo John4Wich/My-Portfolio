@@ -1,0 +1,32 @@
+.footer {
+    border: 1px solid black;
+    padding: 90px 0;
+    background-color: #171512;
+    color: white;
+}
+
+.footer>* {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* .subscribe>* {
+    width: 80%;
+    margin: 0 auto;
+} */
+
+ul>* {
+    font-weight: 700;
+}
+
+.socialMedia>* {
+    border: 1px solid white;
+    border-radius: 50%;
+    box-sizing: content-box;
+    padding: 3px;
+    transition: 300ms all;
+}
+
+.socialMedia>*:hover {
+    transform: scale(1.3);
+}
