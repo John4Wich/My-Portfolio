@@ -4,6 +4,10 @@
     height: 96px;
 }
 
+.list-items{
+    border: 2px solid red;
+
+}
 .list-items>* {
     margin: 0 10px;
     font-weight: 600;
@@ -33,17 +37,7 @@
 .list-items>*:hover::after {
     opacity: 1;
 }
-.lets-talk{
-    border: 1px solid black;
-    padding: 8px 25px;
-    font-weight: 600;
-    transition: 300ms all;
-}
-.lets-talk:hover{
-    background-color: black;
-    color: white;
-}
-.lets-talk:hover button{
-    text-decoration: 1px underline white;
 
+@media screen and (max-width:650px){
+    
 }
