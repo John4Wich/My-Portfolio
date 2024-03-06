@@ -18,9 +18,9 @@ function Home() {
   return (
     <div className="home relative w-[100vw]">
 
-      <div>
-        <img src={animationEffect} alt="image for design only" className="size-50 absolute end-[-120px] bottom-[850px]" />
-        <img src={animationEffect} alt="image for design only" className="size-50 absolute start-[-150px] bottom-[1950px]" />
+      <div className="style-logo">
+        <img src={animationEffect} alt="image for design only" className="styleLogo1 size-50 absolute end-[-120px] bottom-[850px]" />
+        <img src={animationEffect} alt="image for design only" className="styleLogo2 size-50 absolute start-[-150px] bottom-[45%]" />
       </div>
 
 
@@ -28,13 +28,16 @@ function Home() {
 
         <div className="hero-text">
           <p className="beforelondon">
-            HI, I’M TAYLER. A CREATIVE
-            <img
-              src={logoOrange}
-              alt=""
-              className="w-[54px] border-3 herohash"
-              style={{ display: "inline-block", margin: "0px 0px 10px 10px" }}
-            />
+            HI, I’M TAYLER.&nbsp;
+            <span>
+            A CREATIVE
+              <img
+                src={logoOrange}
+                alt=""
+                className="w-[54px] border-3 herohash"
+                style={{ display: "inline-block", margin: "0px 0px 10px 10px" }}
+              />
+            </span>
             DESIGNER{" "}
           </p>
           <p className="london">
@@ -82,7 +85,7 @@ function Home() {
         <Tape />
       </div>
 
-      <div className="p-[100px] w-[100vw]">
+      <div className="infotabmain p-[100px] w-[100vw]">
         <div className="info-section flex gap-[60px] justify-center">
           <div className="tiltle">
             <p className="font-[700] text-[24px]">
@@ -100,7 +103,7 @@ function Home() {
           </div>
 
           <div className="additional-info ">
-            <p className="font-bold text-[2rem] leading-[40px]">
+            <p className="font-bold text-[2rem] leading-[40px] ">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore
             </p>
@@ -109,7 +112,7 @@ function Home() {
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
 
-            <div className="flex justify-between">
+            <div className=" exptabs flex justify-between">
               <TitleAndDesc title={"BORN IN"} desc={"NEW YORK"} />
               <TitleAndDesc title={"EXPERIENCE"} desc={"7+ Years"} />
               <TitleAndDesc title={"DATE OF BIRTH"} desc={"27 June 1992"} />
@@ -117,7 +120,7 @@ function Home() {
           </div>
         </div>
 
-        <div className="epc">
+        <div className="epc ">
           <ExpProClient data={{ exp: 7, project: 50, client: 30 }} />
         </div>
 

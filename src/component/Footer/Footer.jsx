@@ -7,12 +7,12 @@ import Button from "../../Button/Button";
 const Footer = () => {
   return (
     <>
-    <div className="bfsub  bg-[#e7e3df] h-[150px]">
+    <div className="bfsub bg-[#e7e3df] py-[70px]">
         <div className="subscribe flex justify-between w-[80%] mx-auto items-center h-[100%] ">
             <p className="text-2xl font-bold">Subscribe to our newsletter</p>
         
-            <div className="flex gap-[20px]">
-                <input type="email" placeholder="Email Address" className="p-[10px] px-[30px] border-2 border-black bg-[#e7e3df] " />
+            <div className="flex gap-[20px] border-2 border-red">
+                <input type="email" placeholder="Email Address" className=" inputemail p-[10px] px-[30px] border-2 border-black bg-[#e7e3df] " />
                 <Button text={"Subscribe"}/>
             </div>
         </div>
@@ -22,7 +22,9 @@ const Footer = () => {
         
 
       <div className="items flex justify-between">
-        <div className="logo"><img src={whitelogo} alt="logo" width='45px' /></div>
+        <div className="logo">
+          <img src={whitelogo} alt="logo" width='45px' />
+        </div>
         <ul className="flex gap-[40px]">
           <li>Style Guide</li>
           <li>Licence</li>
@@ -31,7 +33,7 @@ const Footer = () => {
       </div>
 
     <div className="second-line flex justify-between mt-[28px]">
-        <p className="text-white">© This project is licensed under the MIT license.</p>
+        <p className="text-white text-center">© This project is licensed under the MIT license.</p>
         <div className="socialMedia flex gap-10 ">
             <Linkedin size={28} color="white" />
             <Instagram size={28} color="white"/>

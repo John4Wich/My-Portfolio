@@ -1,13 +1,15 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef,useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import "./navbar.css";
 import logo from "../../assets/logoOrange.png";
 import Button from "../../Button/Button";
-
+import { AlignJustify,AlignRight  } from 'lucide-react';
+ 
 const Navbar = () => {
   const buttonRef = useRef(true);
   const burger = useRef(false);
-  const burgerBox = useRef(true);
+    const [isBurgerOpen, setIsBurgerOpen] = useState(false);
+  
 
   window.addEventListener('load',()=>{
   if (window.innerWidth <= 800) {
@@ -24,11 +26,6 @@ const Navbar = () => {
         buttonRef.current.style.display = "none";
       }else{
         buttonRef.current.style.display = "block";
-      }
-
-      if(window.innerWidth <=650){
-        burger.current.style.display="none";
-        burgerBox.current.style.display=""
       }
     };
     window.addEventListener("resize", handleResize);
@@ -68,28 +65,17 @@ const Navbar = () => {
           Contact
         </NavLink>
       </div>
-      <div className="list-items" ref={burgerBox}>
-        <NavLink
-          to="/"
-          className={({ isActive }) => `${isActive ? "text-orange-500" : ""}`}
-        >
-          Home
-        </NavLink>
 
-        <NavLink
-          to="/about"
-          className={({ isActive }) => `${isActive ? "text-orange-500 " : ""}`}
-        >
-          About
-        </NavLink>
-        <NavLink
-          to="/contact"
-          className={({ isActive }) => `${isActive ? "text-orange-700 " : ""}`}
-        >
-          Contact
-        </NavLink>
+      <div className="burderCLick" 
+      style={{display:"none"}} 
+      onClick={(event)=>{
+        burger.current.classList.toggle("flex");
+        setIsBurgerOpen(prevState => !prevState)
+      }}>
+       {isBurgerOpen ? <AlignRight /> : <AlignJustify />}
       </div>
-      <div ref={buttonRef}>
+
+      <div ref={buttonRef} className="navButton border-2 border-red-500">
         <Button text={"Let's Talk"}  />
       </div>
     </div>
