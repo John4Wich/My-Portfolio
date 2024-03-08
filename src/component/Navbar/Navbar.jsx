@@ -40,7 +40,7 @@ const Navbar = () => {
       <div className="logo">
         <Link to="/" className="inside-logo flex gap-1 items-center">
           <img src={logo} alt="logo" width="32px" className="text-red-500" />
-          <span className="font-extrabold text-3xl text-[#171512]">Wick</span>
+          <span className="font-extrabold text-3xl text-[#171512]"></span>
         </Link>
       </div>
 
@@ -75,7 +75,7 @@ const Navbar = () => {
        {isBurgerOpen ? <AlignRight /> : <AlignJustify />}
       </div>
 
-      <div ref={buttonRef} className="navButton border-2 border-red-500">
+      <div ref={buttonRef} className="navButton">
         <Button text={"Let's Talk"}  />
       </div>
     </div>

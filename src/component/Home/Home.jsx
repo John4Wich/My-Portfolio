@@ -28,7 +28,7 @@ function Home() {
 
         <div className="hero-text">
           <p className="beforelondon">
-            HI, I’M TAYLER.&nbsp;
+            HI, I’M PAWAN.&nbsp;
             <span>
             A CREATIVE
               <img
@@ -38,14 +38,14 @@ function Home() {
                 style={{ display: "inline-block", margin: "0px 0px 10px 10px" }}
               />
             </span>
-            DESIGNER{" "}
+              DESIGNER{" "}
           </p>
           <p className="london">
-            BASED IN <strike>LONDON</strike>
+            BASED IN <strike></strike>INDIA
           </p>
 
           <div className="sub-text flex flex-wrap gap-[10px] mt-[20px] mb-[40px]">
-            <p>DESIGN</p>
+            <p>UX DESIGN</p>
             <i>
               <img
                 src={logoOrange}
@@ -81,7 +81,7 @@ function Home() {
 
       </div>
 
-      <div className="tape-Component w-[110vw] rotate-[-5deg]  mb-[50px] bg-[#161513] text-[#ffffff] relative left-[-10px]">
+      <div className="tape-Component w-[110vw] rotate-[-5deg]  mb-[50px] bg-[#161513] text-[#ffffff] relative left-[-50px]">
         <Tape />
       </div>
 
@@ -89,13 +89,13 @@ function Home() {
         <div className="info-section flex gap-[60px] justify-center">
           <div className="tiltle">
             <p className="font-[700] text-[24px]">
-              TYLER
+              Pawandeep
               <img
                 className="inline-block mx-[10px]"
                 src="https://assets.website-files.com/62673e4070051ac9b30ad8c7/62673e4070051abbfd0ad8d5_Icon%203.svg"
                 alt=""
               />
-              BARTHHOLD
+              Singh
             </p>
             <p className="text-[3.5rem] font-bold leading-[4rem] mt-[20px]">
               Lead product designer and art director.

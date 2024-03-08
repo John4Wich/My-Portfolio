@@ -32,7 +32,9 @@
     transition: 300ms all;
     opacity: 0;
 }
-
+.navButton{
+    /* box-shadow: 1px 1px 15px rgb(255, 94, 0); */
+}
 .list-items>*:hover::after {
     opacity: 1;
 }
