@@ -1,9 +1,10 @@
 import Lottie from "lottie-web";
 import { useRef, useEffect } from "react";
+import "./gif.css";
 // import Building from "./assets/building.json";
 
 
-export default function GifConversion({data,play}) {
+export default function GifConversion({data,play,sizes}) {
   console.log("what is data : ",data)
   const containers = useRef(null);
   useEffect(() => {
@@ -13,13 +14,14 @@ export default function GifConversion({data,play}) {
       loop: true,
       playmode: true && play ? play : "normal",
       autoplay: true,
-      animationData: data // the path to the animation json
+      animationData: data
+   // the path to the animation json
     });
   }, []);
 
   return (
     <>
-      <div ref={containers} style={{backgroundRepeat:"no-repeat",overflow:"hidden",width:"50vw", height:"80vh"}}></div>
+      <div ref={containers} className='gif' ></div>
     </>
   );
 }

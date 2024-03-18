@@ -1,20 +1,47 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 // import logo from '../../assets/logo.svg'
 import whitelogo from '../../assets/whitelogo.png'
 import "./footer.css";
 import { Linkedin,Instagram,Facebook } from 'lucide-react';
 import Button from "../../Button/Button";
+import {EmailSend} from "./../../emailSend";
+import Spiner from "../../Spiner/Spiner";
 const Footer = () => {
+
+  const [email,setEmail] = useState("");
+  const [loader,setLoader] = useState(false);
+
+
+
+  async function handleSubscribe(e){
+    setLoader((prev)=>!prev)
+    e.preventDefault();
+    let resp = await EmailSend({email : email , name: "Subscribe" ,subject:"subscribe to news letter" , Comment:"Subscribe"})
+    console.log("subcribe response - ",resp)
+    setLoader((prev)=>!prev)
+    setEmail("")
+  }
+
+  useEffect(()=>{
+    console.log("email -",email)
+  },[email])
+
   return (
     <>
     <div className="bfsub bg-[#e7e3df] py-[70px]">
         <div className="subscribe flex justify-between w-[80%] mx-auto items-center h-[100%] ">
             <p className="text-2xl font-bold">Subscribe to our newsletter</p>
         
-            <div className="flex gap-[20px] border-2 border-red">
-                <input type="email" placeholder="Email Address" className=" inputemail p-[10px] px-[30px] border-2 border-black bg-[#e7e3df] " />
+            <form className="flex gap-[20px] border-2 border-red" onSubmit={handleSubscribe}>
+                <input type="email" placeholder="Email Address" required onChange={(e)=>setEmail(e.target.value)} value={email} className=" inputemail p-[10px] px-[30px] border-2 border-black bg-[#e7e3df] " />
+                {
+                  loader ?
+                  <Button text={<Spiner />}/>
+                  :
                 <Button text={"Subscribe"}/>
-            </div>
+                }
+                
+            </form>
         </div>
     </div>
 

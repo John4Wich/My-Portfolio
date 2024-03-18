@@ -2,13 +2,14 @@
     --hero-bg:#f3f1ee;
     --rest-bg:#f3f1ee;
     --font-main:"Bai Jamjuree", sans-serif;
-    --black0-color:#171512;
+    --black0-color:rgb(22, 21, 19);
     --text-white:#e4e5e4;
     --orange-color:#EA4334;
 }
 *{
     /* background-color: var(--hero-bg); */
     font-family: var(--font-main);
+
 }
 
 .app-main{
