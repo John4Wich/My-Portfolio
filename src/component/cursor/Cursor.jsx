@@ -3,7 +3,7 @@ import { useState,useEffect } from 'react';
 import {motion} from "framer-motion";
 
 const Cursor = () => {
-    const [cursor, setCursor] = useState({x:0,y:0});
+    const [cursor, setCursor] = useState({x:-30,y:-30});
 
    useEffect(() => {
      function handleMouse(e){
@@ -22,7 +22,8 @@ const Cursor = () => {
 
     return (
         <motion.div className='cursor w-[15px] h-[15px] ' 
-        animate={{ x:cursor.x , y:cursor.y}}
+        // initial={{}}
+        animate={{ x:cursor.x , y:cursor.y }}
         style={{
             position:"fixed",
             zIndex:"1000",
@@ -30,7 +31,7 @@ const Cursor = () => {
             opacity:0.7,
             margin:"10px 10px",
             borderRadius:"50%",
-            boxShadow: "1px 1px 20px 15px rgb(234, 67, 52)"
+            boxShadow: "1px 1px 5px 5px rgb(234, 67, 52)"
         }}
         >
             

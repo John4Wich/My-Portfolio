@@ -395,9 +395,7 @@
     }
 }
 @media screen and  (max-width:370px){
-    .home{
-        border: 10px solid red;
-    }
+    
     .hero-text>.beforelondon {
         font-weight: 700;
         font-size: 30px;

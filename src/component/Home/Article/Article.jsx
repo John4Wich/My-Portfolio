@@ -1,8 +1,9 @@
 import React from "react";
+import {motion} from "framer-motion";
 
 const Article = ({ data }) => {
   return (
-    <div className=" article-con flex p-[20px] gap-[30px] border-[2px] border-[#161513] mb-[40px]">
+    <motion.div className=" article-con flex p-[20px] gap-[30px] border-[2px] border-[#161513] mb-[40px]">
 
       <div className="font-[700] ">
         <p className="text-[#EA4334] leading-[30px]">
@@ -14,7 +15,7 @@ const Article = ({ data }) => {
         {data.content}
       </div>
 
-    </div>
+    </motion.div>
   );
 };
 

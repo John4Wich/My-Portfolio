@@ -11,6 +11,11 @@
     position: relative;
     animation-duration: 2s;
 }
+.dev3{
+    animation-delay: 10;
+    position: relative;
+    animation-duration: 2s;
+}
 
 @keyframes tv {
     0%{

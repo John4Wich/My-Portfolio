@@ -24,16 +24,15 @@ const Navbar = () => {
     },
   };
 
-  window.addEventListener("load", () => {
-    if (window.innerWidth <= 800) {
-      buttonRef.current.style.display = "none";
-    } else {
-      buttonRef.current.style.display = "block";
-    }
-  });
+  
 
   useEffect(() => {
-    const handleResize = () => {
+    console.log("resize run")
+//  dont know why it is not working the condition when reload so i  put this code in useeffect
+      buttonRef.current.style.display = "none";
+
+    const handleResize = (e) => {
+      console.log(e)
       if (window.innerWidth <= 800) {
         buttonRef.current.style.display = "none";
       } else {
@@ -41,7 +40,19 @@ const Navbar = () => {
       }
     };
     window.addEventListener("resize", handleResize);
-  }, []); // empty dependency array means it runs only once after the initial render
+    
+  }, [window.innerWidth <= 800])
+
+  // window.addEventListener("load", () => {
+  //     console.log("inner width -",window.innerWidth)
+  //   if (window.innerWidth <= 800) {
+  //     buttonRef.current.style.display = "none";
+  //   } else {
+  //     buttonRef.current.style.display = "block";
+  //   }
+  // });
+
+  
 
   const closeNavBar = () => {
     setIsBurgerOpen((prev) => !prev);

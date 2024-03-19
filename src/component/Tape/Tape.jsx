@@ -39,7 +39,7 @@ const Tape = () => {
                     <p><Sparkles color="red"/></p>
                     <p>ART DIRECTION</p>
                 </div>
-                {/* <div className='tap dev3 flex justify-start gap-[30px] '>
+                {/* <div className='tap dev2 flex justify-start gap-[30px] '>
                     <p><Sparkles color="red"/></p>
                     <p>DESIGN</p>
                     <p><Sparkles color="red"/></p>
