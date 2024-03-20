@@ -61,9 +61,8 @@ function Home() {
                   <motion.img
                     animate={{ rotate: 180 }}
                     transition={{ duration: 0.5, delay: 1 }}
-                  
                     drag
-                    dragConstraints={{ left: 0, right: 0,top:0,bottom:0 }}
+                    dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
                     dragElastic={1}
                     src={logoOrange}
                     alt=""
@@ -71,7 +70,6 @@ function Home() {
                     style={{
                       display: "inline-block",
                       margin: "0px 0px 10px 10px",
-                     
                     }}
                   />
                 </span>
@@ -105,7 +103,15 @@ function Home() {
 
               <div className="hero-button">
                 <Button text={"Got a Project"} color={"black"} />
-                <Button text={"Let's Talk"} />
+                <NavLink
+                  // onClick={closeNavBar}
+                  to="/contact"
+                  className={({ isActive }) =>
+                    `${isActive ? "text-orange-700 " : ""}`
+                  }
+                >
+                  <Button text={"Let's Talk"} />
+                </NavLink>
               </div>
             </motion.div>
 
@@ -151,24 +157,24 @@ function Home() {
                   Singh
                 </p>
                 <p className="text-[3.5rem] font-bold sm:leading-[4rem] sm:mt-[20px] mt-[10px]">
-                  Lead product designer and art director.
+                  Lead product designer and developer.
                 </p>
               </div>
 
               <div className="additional-info ">
                 <p className="font-bold text-[2rem] sm:leading-[40px] ">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore
+                  Passionate about crafting exceptional user experiences and
+                  bringing innovative ideas to life.
                 </p>
                 <p className=" text-[14px] sm:text-[18px]  font-[500] my-[40px]">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  I believe in the power of design and technology to transform
+                  businesses and make a positive impact on people's lives.
                 </p>
 
                 <div className=" exptabs flex justify-between">
-                  <TitleAndDesc title={"BORN IN"} desc={"NEW YORK"} />
-                  <TitleAndDesc title={"EXPERIENCE"} desc={"7+ Years"} />
-                  <TitleAndDesc title={"DATE OF BIRTH"} desc={"27 June 1992"} />
+                  <TitleAndDesc title={"BORN IN"} desc={"Rajasthan"} />
+                  <TitleAndDesc title={"EXPERIENCE"} desc={"1+ Years"} />
+                  <TitleAndDesc title={"DATE OF BIRTH"} desc={"04 May 2002"} />
                 </div>
               </div>
             </motion.div>
@@ -182,7 +188,7 @@ function Home() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="epc"
             >
-              <ExpProClient data={{ exp: 7, project: 50, client: 30 }} />
+              <ExpProClient data={{ exp: 1, project: 5, client: 1 }} />
             </motion.div>
 
             <motion.div
@@ -206,28 +212,28 @@ function Home() {
                   data={{
                     title: "Web Design",
                     content:
-                      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eligendi odio sint obcaecati alias veas est",
+                      "Passionate about creating visually stunning and user-friendly websites that leave a lasting impression. I specialize in translating complex ideas into intuitive and engaging digital experiences.",
                   }}
                 />
                 <Service
                   data={{
                     title: "Product Design",
                     content:
-                      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eligendi odio sint obcaecati alis est",
+                      "Dedicated to conceptualizing and developing innovative products that solve real-world problems and delight users. From ideation to execution, I focus on delivering solutions that drive business growth and user satisfaction.",
                   }}
                 />
                 <Service
                   data={{
                     title: "UI/UX Design",
                     content:
-                      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eligendi odio sint obcaecati alias ve est",
+                      "Committed to crafting seamless and delightful user interfaces that enhance usability and elevate the overall user experience. I believe in the power of thoughtful design to create meaningful connections between users and digital products.",
                   }}
                 />
                 <Service
                   data={{
-                    title: "Art Direction",
+                    title: "Developer",
                     content:
-                      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eligendi odio sint obcaecati  est",
+                      "I take the lead in crafting visual narratives that captivate audiences and evoke powerful emotions. Every project, from inception to completion, is a journey towards creating immersive and impactful experiences that leave a lasting impression. Resonating with users on a profound level and driving engagement to new heights.",
                   }}
                 />
               </div>
@@ -257,7 +263,6 @@ function Home() {
                     opacity: 1,
                     transition: { delay: 0.3, duration: 0.3, type: "spring" },
                   }}
-                  
                   viewport={{ once: true }}
                 >
                   <Article
@@ -267,6 +272,7 @@ function Home() {
                       title: "Why i moved from Wordpress to Webflow",
                       content: `
                             Lorem ipsum dolor, sit amet consectetur adipisicing tore modi voluptatibus dicta. Reprehenderit facilis eius quibusdam eos nisi?`,
+                      link: "https://webflow.com/blog/transfer-website",
                     }}
                   />
                 </motion.div>
@@ -284,7 +290,8 @@ function Home() {
                     data={{
                       type: "DESIGN",
                       date: "APRIL 26, 2022",
-                      title: "What did i learn fromdoing 50+ design sprints",
+                      title: "What did i learn from doing 5+ design sprints",
+                      link: "https://webflow.com/blog/transfer-website",
                       content: `
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet isteptatibus dicta. Reprehenderit facilis eius quibusdam eos nisi?`,
                     }}

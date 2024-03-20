@@ -86,24 +86,17 @@ const About = () => {
 
           <div className="text-about mt-[-50px]">
             <p className="md:columns-2 lg:px-[60px] font-[500] text-[18px] leading-[32px] text-[#161513] gap-[50px]">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius
-              officia non ducimus architecto earum nemo repellat, autem deserunt
-              eum ea amet porro! Quisquam error ipsum ea debitis facilis saepe.
-              Accusamus deleniti architecto quos provident laborum velit
-              nostrum, eveniet dignissimos, unde inventore rem expedita cum
-              voluptatem perferendis quia placeat tempora mollitia neque aliquam
-              ea magnam, est nisi doloribus dolore? Facilis, amet, illum ut sit
-              ipsam dolore commodi dolores ducimus doloremque quo maxime
-              suscipit, harum beatae tenetur culpa porro inventore! Alias,
-              aliquid maiores praesentium cupiditate, quidem corrupti, in
-              laborum recusandae commodi provident autem est expedita eveniet?
-              Enim ut quasi provident. Maiores, in! Lorem ipsum dolor sit amet,
-              consectetur adipisicing elit. Eius officia non ducimus architecto
-              earum nemo repellat, autem deserunt eum ea amet porro! Quisquam
-              error ipsum ea debitis facilis saepe. Accusamus deleniti
-              architecto quos provident laborum velit nostrum, eveniet
-              dignissimos, unde inventore rem expedita cum voluptatem
-              perferendis quia placeat temp
+              Embarking on the journey of launching a business is both thrilling
+              and challenging. At this pivotal moment, the importance of making
+              a strong first impression cannot be overstated. That's where our
+              expertise comes in. With a dedicated team of professionals, we
+              offer comprehensive solutions to help turn your entrepreneurial
+              dreams into reality. From branding to design, we're committed to
+              ensuring that your business stands out in the competitive
+              landscape. Our meticulous attention to detail and innovative
+              approach will not only make your venture look visually appealing
+              but also set it apart from the crowd. Let us be your partner in
+              success as you embark on this exciting journey.
             </p>
           </div>
 
@@ -118,35 +111,44 @@ const About = () => {
           </motion.div>
 
           <motion.div
-            initial={{  y: 100,opacity:0 }}
-            whileInView={{ y:0,opacity: 1}}
+            initial={{ y: 100, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ duration:.5, delay: 0.2, type: "spring" }}
+            transition={{ duration: 0.5, delay: 0.2, type: "spring" }}
             className="text-about"
           >
             <p
               className="px-[20px] font-[500] md:w-[60%] leading-[32px] text-[18px] mx-[auto] text-[#161513] gap-[50px]"
               style={{ marginBottom: "50px" }}
             >
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius
-              officia non ducimus architecto earum nemo repellat, autem deserunt
-              eum ea amet porro! Quisquam error ipsum ea debitis facilis saepe.
-              Accusamus deleniti architecto quos provident laborum velit
-              nostrum, eveniet dignissimos, unde inventore rem expedita cum
-              voluptatem perferendis quia placeat tempora mollitia neque aliquam
-              ea magnam, es
+              As you prepare to launch your business, it's essential to consider
+              every aspect of its presentation. <i><b>
+                Our team specializes in crafting
+                compelling brand identities that resonate with your target
+                audience.
+               From logo design to website development, we ensure that
+              every touchpoint reflects your brand's values and message.</b></i>
+              Furthermore, our expertise extends beyond aesthetics. We offer
+              strategic guidance to help you navigate the complexities of the
+              market landscape. With our industry insights and market analysis,
+              you can make informed decisions that propel your business forward.
+              Moreover.
             </p>
             <p className="px-[20px] font-[500] md:w-[60%] text-[18px] leading-[32px] mx-[auto] text-[rgb(22, 21, 19)] gap-[50px]">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius
-              officia non ducimus architecto earum nemo repellat, autem deserunt
-              eum ea amet porro! Quisquam error ipsum ea debitis facilis saepe.
+              we understand the importance of scalability. Our solutions are
+              designed to grow with your business, ensuring long-term success
+              and sustainability. By partnering with us, you not only gain
+              access to top-notch design and marketing services but also a
+              trusted advisor committed to your business's success. Let's embark
+              on this journey together and create a brand that leaves a lasting
+              impression on your audience.
               <div className="gif mx-[auto] flex justify-center h-[100vh] overflow-hidden ">
                 <GifConversion data={PhoneAnimation} />
               </div>
-              Accusamus deleniti architecto quos provident laborum velit
-              nostrum, eveniet dignissimos, unde inventore rem expedita cum
-              voluptatem perferendis quia placeat tempora mollitia neque aliquam
-              ea magnam, es
+              <b style={{fontFamily:"Bilbo, cursive",wordSpacing:"5px"}} className="text-[25px]" >"With our comprehensive approach to design and strategic guidance,
+              you can confidently launch your business knowing that every detail
+              has been meticulously crafted to captivate your audience and
+              propel your success."</b>
             </p>
           </motion.div>
 
@@ -165,38 +167,36 @@ const About = () => {
               REGONITIONS & ACCOIMPLISHMENTS
             </p>
             <div className="service-blocks flex flex-wrap gap-[20px] justify-center mt-[4rem]">
-              <Service
-                data={{
-                  title: "Web Design",
-                  content:
-                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eligendi odio sint obcaecati alias veas est",
-                }}
-              />
-              <Service
-                data={{
-                  title: "Product Design",
-                  content:
-                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eligendi odio sint obcaecati alis est",
-                }}
-              />
-              <Service
-                data={{
-                  title: "UI/UX Design",
-                  content:
-                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eligendi odio sint obcaecati alias ve est",
-                }}
-              />
-              <Service
-                data={{
-                  title: "Art Direction",
-                  content:
-                    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit eligendi odio sint obcaecati  est",
-                }}
-              />
-            </div>
+                <Service
+                  data={{
+                    title: "Web Design",
+                    content:
+                      "Passionate about creating visually stunning and user-friendly websites that leave a lasting impression. I specialize in translating complex ideas into intuitive and engaging digital experiences.",
+                  }}
+                />
+                <Service
+                  data={{
+                    title: "Product Design",
+                    content:
+                      "Dedicated to conceptualizing and developing innovative products that solve real-world problems and delight users. From ideation to execution, I focus on delivering solutions that drive business growth and user satisfaction.",
+                  }}
+                />
+                <Service
+                  data={{
+                    title: "UI/UX Design",
+                    content:
+                      "Committed to crafting seamless and delightful user interfaces that enhance usability and elevate the overall user experience. I believe in the power of thoughtful design to create meaningful connections between users and digital products.",
+                  }}
+                />
+                <Service
+                  data={{
+                    title: "Developer",
+                    content:
+                      "I take the lead in crafting visual narratives that captivate audiences and evoke powerful emotions. Every project, from inception to completion, is a journey towards creating immersive and impactful experiences that leave a lasting impression. Resonating with users on a profound level and driving engagement to new heights.",
+                  }}
+                />
+              </div>
           </motion.div>
-
-          
         </section>
       </div>
 

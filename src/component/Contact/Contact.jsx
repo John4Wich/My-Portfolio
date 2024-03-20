@@ -67,7 +67,7 @@ const Contact = () => {
           Get in touch today!
         </h1>
         <p className="text-center font-[500] text-[18px] text-[#161513]">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, tempore
+          Very nice to see you on our platform . Hope you enjoy scrolling.
         </p>
 
         <div className="contact-input w-[80%] mx-auto mt-[50px]">

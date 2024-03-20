@@ -2,7 +2,8 @@ import React from 'react';
 import { useState,useEffect } from 'react';
 import {motion} from "framer-motion";
 
-const Cursor = () => {
+const 
+Cursor = () => {
     const [cursor, setCursor] = useState({x:-30,y:-30});
 
    useEffect(() => {
@@ -31,7 +32,7 @@ const Cursor = () => {
             opacity:0.7,
             margin:"10px 10px",
             borderRadius:"50%",
-            boxShadow: "1px 1px 5px 5px rgb(234, 67, 52)"
+            boxShadow: "1px 1px 10px 5px red"
         }}
         >
             

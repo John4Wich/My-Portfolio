@@ -27,30 +27,19 @@ const Navbar = () => {
   
 
   useEffect(() => {
-    console.log("resize run")
-//  dont know why it is not working the condition when reload so i  put this code in useeffect
-      buttonRef.current.style.display = "none";
-
     const handleResize = (e) => {
-      console.log(e)
       if (window.innerWidth <= 800) {
         buttonRef.current.style.display = "none";
       } else {
         buttonRef.current.style.display = "block";
       }
     };
+    handleResize(); 
     window.addEventListener("resize", handleResize);
     
-  }, [window.innerWidth <= 800])
+  },[window.innerWidth <= 800]);
 
-  // window.addEventListener("load", () => {
-  //     console.log("inner width -",window.innerWidth)
-  //   if (window.innerWidth <= 800) {
-  //     buttonRef.current.style.display = "none";
-  //   } else {
-  //     buttonRef.current.style.display = "block";
-  //   }
-  // });
+  
 
   
 
@@ -58,18 +47,7 @@ const Navbar = () => {
     setIsBurgerOpen((prev) => !prev);
   };
 
-  const contactScroll = () => {
-    setTimeout(() => {
-      scroll.scrollTo("contact-id", {
-        smooth: true,
-        duration: 500,
-        offset: -70, // Optional offset if needed
-      });
-    }, 2000);
-  };
-  useEffect(()=>{
-  console.log("current value -", burger.current.style.display);
-  },[burger.current])
+
   return (
     <div className="navbar flex items-center justify-between px-[10px]">
       <div  className="logo">
@@ -149,7 +127,13 @@ const Navbar = () => {
       </motion.div>
 
       <div ref={buttonRef} className="navButton">
+        <NavLink
+          onClick={closeNavBar}
+          to="/contact"
+          className={({ isActive }) => `${isActive ? "text-orange-700 " : ""}`}
+        >
         <Button text={"Let's Talk"} />
+        </NavLink>
       </div>
     </div>
   );
