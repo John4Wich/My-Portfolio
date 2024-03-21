@@ -14,6 +14,7 @@ import Article from "./Article/Article";
 import animationEffect from "./../../assets/animationEffect.svg";
 import { NavLink } from "react-router-dom";
 import { motion, spring, AnimatePresence } from "framer-motion";
+import {toast} from "react-hot-toast";
 
 function Home() {
   const ref1 = useRef(null);
@@ -231,7 +232,7 @@ function Home() {
                 />
                 <Service
                   data={{
-                    title: "Developer",
+                    title: "Development",
                     content:
                       "I take the lead in crafting visual narratives that captivate audiences and evoke powerful emotions. Every project, from inception to completion, is a journey towards creating immersive and impactful experiences that leave a lasting impression. Resonating with users on a profound level and driving engagement to new heights.",
                   }}
@@ -271,7 +272,7 @@ function Home() {
                       date: "APRIL 28, 2022",
                       title: "Why i moved from Wordpress to Webflow",
                       content: `
-                            Lorem ipsum dolor, sit amet consectetur adipisicing tore modi voluptatibus dicta. Reprehenderit facilis eius quibusdam eos nisi?`,
+                            I transitioned from Wordpress to Webflow for its intuitive design interface and seamless development experience, streamlining website creation and maintenance processes effectively.`,
                       link: "https://webflow.com/blog/transfer-website",
                     }}
                   />
@@ -291,9 +292,9 @@ function Home() {
                       type: "DESIGN",
                       date: "APRIL 26, 2022",
                       title: "What did i learn from doing 5+ design sprints",
-                      link: "https://webflow.com/blog/transfer-website",
+                      link: "https://www.differential.com/posts/the-design-sprint-5-lessons-learned#:~:text=One%20of%20the%20most%20important,built%20before%20the%20sprint%20begins.",
                       content: `
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet isteptatibus dicta. Reprehenderit facilis eius quibusdam eos nisi?`,
+From 5+ design sprints, I've learned efficient collaboration and rapid prototyping, enhancing creativity and problem-solving skills.`,
                     }}
                   />
                 </motion.div>
@@ -307,31 +308,34 @@ function Home() {
                   }}
                   viewport={{ once: true }}
                 >
-                  <Article
+                  {/* <Article
                     data={{
                       type: "BUSINESS & OFFICE",
                       date: "APRIL 26, 2022",
                       title: "Fostering professional growth in your company",
+                      link: "https://lovinglifeco.com/corporate/10-effective-ways-to-foster-staff-development-in-your-organisation/",
                       content: `
           Lorem ipsum dolor, sit amet consectetur  dicta. Reprehenderit facilis eius quibusdam eos nisi?`,
                     }}
-                  />
+                  /> */}
                 </motion.div>
               </div>
             </motion.div>
 
             <motion.div
               // ref={ref1}
-              initial={{ opacity: 0, y: 200 }}
-              // animate={true ? { opacity: 1, y: 0 } : {}}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.1 }}
+              // initial={{ opacity: 0, y: 200 }}
+              
+              // whileInView={{ opacity: 1, y: 0 }}
+              // viewport={{ once: true }}
+              // transition={{ duration: 0.5, delay: 0.1 }}
+              onClick={() => {
+                  toast("More articles are on the way 🤞");
+                }}
               className="bg-[#161513] p-[5px] w-[90%] mx-[auto]"
             >
-              <NavLink to="/about">
+              
                 <Button text={"Browse Article"} color={"black"} />
-              </NavLink>
             </motion.div>
           </div>
         </div>

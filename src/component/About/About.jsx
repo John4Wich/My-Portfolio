@@ -107,7 +107,7 @@ const About = () => {
             viewport={{ once: true }}
             className="epc"
           >
-            <ExpProClient data={{ exp: 7, project: 50, client: 30 }} />
+            <ExpProClient data={{ exp: 1, project: 5, client: 1 }} />
           </motion.div>
 
           <motion.div
@@ -190,7 +190,7 @@ const About = () => {
                 />
                 <Service
                   data={{
-                    title: "Developer",
+                    title: "Development",
                     content:
                       "I take the lead in crafting visual narratives that captivate audiences and evoke powerful emotions. Every project, from inception to completion, is a journey towards creating immersive and impactful experiences that leave a lasting impression. Resonating with users on a profound level and driving engagement to new heights.",
                   }}

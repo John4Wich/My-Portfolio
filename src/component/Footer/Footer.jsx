@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
-// import logo from '../../assets/logo.svg'
+import {toast} from "react-hot-toast";
 import whitelogo from '../../assets/whitelogo.png'
 import "./footer.css";
 import { Linkedin,Instagram,Facebook } from 'lucide-react';
 import Button from "../../Button/Button";
 import {EmailSend} from "./../../emailSend";
 import Spiner from "../../Spiner/Spiner";
+import {Link} from "react-router-dom";
 const Footer = () => {
 
   const [email,setEmail] = useState("");
@@ -25,6 +26,19 @@ const Footer = () => {
   useEffect(()=>{
     console.log("email -",email)
   },[email])
+
+  function underDev(){
+     toast("This page is under development.",
+  {
+    icon: '🤷‍♂️',
+    style: {
+      borderRadius: '10px',
+      background: '#333',
+      color: '#fff',
+    },
+  }
+);      
+  }
 
   return (
     <>
@@ -53,18 +67,31 @@ const Footer = () => {
           <img src={whitelogo} alt="logo" width='45px' />
         </div>
         <ul className="flex gap-[40px]">
-          <li>Style Guide</li>
-          <li>Licence</li>
-          <li>Changelog</li>
+          
+            <li style={{cursor:"pointer"}} onClick={underDev}>Style Guide</li>
+          
+          
+            <li style={{cursor:"pointer"}} onClick={underDev}>Licence</li>
+          
+          
+            <li  style={{cursor:"pointer"}} onClick={underDev}>Changelog</li>
+          
         </ul>
       </div>
 
     <div className="second-line flex justify-between mt-[28px]">
         <p className="text-white text-center">© This project is licensed under the MIT license.</p>
         <div className="socialMedia flex gap-10 ">
-            <Linkedin size={28} color="white" />
+          <Link to="https://www.instagram.com/anmol___47?igsh=MW02dWZjZjRxMTFubQ==" target="_blank">
             <Instagram size={28} color="white"/>
+          </Link>
+          <Link to="https://www.linkedin.com/in/pawan-deep-525133222" target="_blank">
+            <Linkedin size={28} color="white" />
+          </Link>
+          <Link to="https://www.facebook.com/profile.php?id=100025257840732&mibextid=ZbWKwL" target="_blank">
             <Facebook size={28} color="white"/>
+          </Link>
+
         </div>
     </div>
 

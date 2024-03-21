@@ -1,5 +1,6 @@
 import toast from "react-hot-toast";
 
+
 export async function EmailSend({ name = "NA", email = "NA", subject = "NA", Comment = "NA" }) {
 
     var data = {
